@@ -1,0 +1,28 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "us-west-2",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "website",
+          "name": "Website",
+          "type": "fargate",
+          "buildType": "nixpacks",
+          "cpu": 0.5,
+          "memory": 1,
+          "minInstances": 2,
+          "maxInstances": 2,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "healthCheckPath": "/health"
+        }
+      ]
+    }
+  ]
+}
