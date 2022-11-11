@@ -18,7 +18,7 @@
           "cpu": 0.5,
           "memory": 1,
           "minInstances": 2,
-          "maxInstances": 1,
+          "maxInstances": 2,
           "buildCommand": "npm run build",
           "startCommand": "npm run start",
           "healthCheckPath": "/health"
